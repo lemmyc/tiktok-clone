@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Button from './components/Button'
 function App() {
   return (
     <div className="App">
+      <Button/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          456
+          chu thich
         </a>
       </header>
     </div>
