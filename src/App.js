@@ -1,18 +1,17 @@
-import logo from '~/tiktok-logo.png';
-import './App.css';
-import Button from './components/Button';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { publicRoutes } from '~/routes';
 function App() {
     return (
-        <div className="App">
-            <Button />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>TIKTOK CLONE</p>
-                <a className="App-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
-                    Truy cập Tiktok
-                </a>
-            </header>
-        </div>
+        <Router>
+            <div className="App">
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        const Page = route.component;
+                        return <Route key={index} path={route.path} element={<Page />} />;
+                    })}
+                </Routes>
+            </div>
+        </Router>
     );
 }
 
