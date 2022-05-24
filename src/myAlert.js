@@ -1,4 +1,4 @@
-const myAlert = ()=>{
-    alert("Hello");
-}
-export default myAlert
+const myAlert = () => {
+    alert('Hello');
+};
+export default myAlert;
