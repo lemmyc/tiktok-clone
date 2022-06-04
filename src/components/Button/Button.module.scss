@@ -1,4 +1,7 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
@@ -8,13 +11,36 @@
     background-color: var(--white);
     border: 1px solid transparent;
     overflow: hidden;
+    user-select: none;
+    + .wrapper {
+        margin-left: 16px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
 }
-
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
 // Button types
+.rounded {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 999px;
+    color: #333;
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.25);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
 .primary {
+    border-color: var(--primary);
     background-color: var(--primary);
     color: var(--white);
     &:hover {
+        border-color: var(--primary);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
@@ -22,9 +48,18 @@
     border-color: var(--primary);
     color: var(--primary);
     &:hover {
+        border-color: var(--primary);
         background-color: rgba(254, 44, 85, 0.06);
     }
 }
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Disabled
+
 //Button sizes
 .small {
     min-width: 88px;
