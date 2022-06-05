@@ -51,19 +51,6 @@ function Button({
         // button status
         disabled,
     });
-    console.log({
-        [className]: className,
-        // button types
-        primary,
-        outline,
-        text,
-        rounded,
-        // button sizes
-        small,
-        large,
-        // button status
-        disabled,
-    });
     return (
         <Component className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
