@@ -53,6 +53,11 @@
     right: calc(var(--seach-button-width) + 8px);
     margin: 0 8px;
 }
+.loading {
+    cursor: default;
+    -webkit-animation: spin 1s infinite ease-in-out forwards;
+    animation: spin 1s infinite ease-in-out forwards;
+}
 .search-btn {
     width: var(--seach-button-width);
     height: 100%;
@@ -66,5 +71,19 @@
     }
     &:active {
         background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
     }
 }
