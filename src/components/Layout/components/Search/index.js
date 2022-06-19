@@ -8,7 +8,7 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { SearchIcon } from '~/components/Icons';
-
+import { useDebounce } from '~/hooks';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 const cx = classNames.bind(styles);
@@ -19,6 +19,8 @@ function Search() {
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
     const inputRef = useRef();
+
+    const debounced = useDebounce(searchValue, 500);
 
     useEffect(() => {
         if (!searchValue.trim()) {
@@ -37,7 +39,8 @@ function Search() {
             .catch(() => {
                 setLoading(false);
             });
-    }, [searchValue]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debounced]);
 
     const handleClear = () => {
         setSearchValue('');
