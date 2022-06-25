@@ -35,6 +35,76 @@ const MENU_ITEMS = [
                     code: 'vi-VN',
                     title: 'Tiếng Việt',
                 },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en-US',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi-VN',
+                    title: 'Tiếng Việt',
+                },
             ],
         },
     },

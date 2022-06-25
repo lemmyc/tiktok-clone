@@ -50,6 +50,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFun
             interactive={true}
             delay={[0, 750]}
             offset={[12, 8]}
+            visible={true}
             hideOnClick={hideOnClick}
             placement="bottom-end"
             render={(attrs) => (
@@ -63,7 +64,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFun
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
