@@ -7,6 +7,7 @@ import classNames from 'classnames/bind';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
+import routesConfig from '~/config/routes';
 import images from '~/assets/images';
 
 import Menu from '~/components/Popper/Menu';
@@ -14,6 +15,7 @@ import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { InboxIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -83,9 +85,9 @@ export default function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok"></img>
-                </div>
+                </Link>
 
                 <Search />
 
@@ -101,6 +103,7 @@ export default function Header() {
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
+                                    <span className={cx('badge')}>24</span>
                                 </button>
                             </Tippy>
                         </>
@@ -114,7 +117,7 @@ export default function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ea0854578085ab26effc2c7b8cefa270~c5_300x300.webp?x-expires=1654506000&x-signature=MdAar6mvHllKXLTR1i2CBeQQc9Q%3D"
+                                src="https://i.pinimg.com/564x/c7/b5/b5/c7b5b556505c7db7d03ab52275e51a48.jpg"
                                 alt="Đào Lê Phương Hoa"
                             />
                         ) : (
